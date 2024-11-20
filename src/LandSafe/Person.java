@@ -44,6 +44,10 @@ public class Person {
         return alive;
     }
 
+    public void dies() {
+        alive = false;
+    }
+
     public List<Land> getPropertiesOwned() {
         return propertiesOwned;
     }
