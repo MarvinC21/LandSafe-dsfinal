@@ -19,10 +19,12 @@ public class Person {
     }
 
     public void addProperty(Land land) {
+        if (propertiesOwned.contains(land)) return;
         this.propertiesOwned.add(land);
     }
 
     public void removeProperty(Land land) {
+        if (!propertiesOwned.contains(land)) return;
         this.propertiesOwned.remove(land);
     }
 
@@ -30,7 +32,6 @@ public class Person {
         return name;
     }
     
-
     public String getId() {
         return id;
     }
