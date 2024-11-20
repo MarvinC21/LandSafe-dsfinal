@@ -51,9 +51,11 @@ public class Person {
     public List<Land> getPropertiesOwned() {
         return propertiesOwned;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+    
     public void setId(String id) {
         this.id = id;
     }
