@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
+import java.util.Calendar;
 
 /**
  * LandSafe is a Java Swing application that simulates the transfer of land ownership between two persons.
@@ -18,6 +19,7 @@ public class LandSafe {
     private JTextField nameField2, idField2, ageField2; 
     private HashMap<String, Person> personMap; // Map of person ID to person object
     private DefaultListModel<String> transferListModel; // List model for transfer records
+    Calendar currentTime = Calendar.getInstance();
 
     /**
      * The main method to launch the application.
@@ -121,7 +123,8 @@ public class LandSafe {
 
                     Land land = new Land("LAND001", person1);
 
-                    transfer(land, person1.getId(), person2.getId(), "2024-11-20");
+                    transfer(land, person1.getId(), person2.getId(), currentTime.get(Calendar.HOUR_OF_DAY)
+                    + ":"+ currentTime.get(Calendar.MINUTE));
 
                     ownerLabel.setText("Current owner of the land: " + land.getOwner().getName());
                     transferListModel.addElement("Transferred from " + person1.getName() + " to " + person2.getName() + " on 2024-11-20");
@@ -168,7 +171,8 @@ public class LandSafe {
         Person newOwner = personMap.get(newOwnerId);
 
         if (currentOwner != null && newOwner != null) {
-            Transfer transfer = new Transfer(currentOwner, newOwner, date);
+            Transfer transfer = new Transfer(currentOwner, newOwner, currentTime.get(Calendar.HOUR_OF_DAY)
+            + ":"+ currentTime.get(Calendar.MINUTE));
             land.addTransfer(transfer);
             currentOwner.removeProperty(land);
             newOwner.addProperty(land);

@@ -9,7 +9,7 @@ public class Transfer {
 
     private Person currentOwner;
     private Person newOwner;
-    private String date;
+    private String currentTime; 
 
     /**
      * Constructs a Transfer object with the specified current owner, new owner, and date.
@@ -21,7 +21,7 @@ public class Transfer {
     public Transfer(Person from, Person to, String date) {
         this.currentOwner = from;
         this.newOwner = to;
-        this.date = date;
+        this.currentTime = date;
     }
 
     /**
@@ -48,6 +48,6 @@ public class Transfer {
      * @return the date of the transfer
      */
     public String getDate() {
-        return date;
+        return currentTime;
     }
 }
