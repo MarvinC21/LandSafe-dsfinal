@@ -127,7 +127,7 @@ public class LandSafe {
                     + ":"+ currentTime.get(Calendar.MINUTE));
 
                     ownerLabel.setText("Current owner of the land: " + land.getOwner().getName());
-                    transferListModel.addElement("Transferred from " + person1.getName() + " to " + person2.getName() + " on 2024-11-20");
+                    transferListModel.addElement("Transferred from " + person1.getName() + " to " + person2.getName() + " on "+ currentTime.getTime());
                 }
             }
         });
