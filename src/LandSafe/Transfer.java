@@ -1,5 +1,6 @@
 package LandSafe;
 
+import java.util.Date;
 
 /**
  * The Transfer class represents a transfer of ownership from one person to another.
@@ -9,7 +10,7 @@ public class Transfer {
 
     private Person currentOwner;
     private Person newOwner;
-    private String currentTime; 
+    private Date currentTime; 
 
     /**
      * Constructs a Transfer object with the specified current owner, new owner, and date.
@@ -18,7 +19,7 @@ public class Transfer {
      * @param to the new owner of the property
      * @param date the date of the transfer
      */
-    public Transfer(Person from, Person to, String date) {
+    public Transfer(Person from, Person to, Date date) {
         this.currentOwner = from;
         this.newOwner = to;
         this.currentTime = date;
@@ -48,6 +49,6 @@ public class Transfer {
      * @return the date of the transfer
      */
     public String getDate() {
-        return currentTime;
+        return currentTime.toString();
     }
 }

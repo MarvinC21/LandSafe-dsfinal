@@ -19,7 +19,7 @@ public class LandSafe {
     private JTextField nameField2, idField2, ageField2; 
     private HashMap<String, Person> personMap; // Map of person ID to person object
     private DefaultListModel<String> transferListModel; // List model for transfer records
-    Calendar currentTime = Calendar.getInstance();
+    Calendar currentTime;
 
     /**
      * The main method to launch the application.
@@ -115,6 +115,7 @@ public class LandSafe {
         transferButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (validateInputs()) {
+                    currentTime = Calendar.getInstance();
                     Person person1 = new Person(nameField1.getText(), idField1.getText(), Integer.parseInt(ageField1.getText()), true);
                     Person person2 = new Person(nameField2.getText(), idField2.getText(), Integer.parseInt(ageField2.getText()), true);
 
@@ -171,8 +172,7 @@ public class LandSafe {
         Person newOwner = personMap.get(newOwnerId);
 
         if (currentOwner != null && newOwner != null) {
-            Transfer transfer = new Transfer(currentOwner, newOwner, currentTime.get(Calendar.HOUR_OF_DAY)
-            + ":"+ currentTime.get(Calendar.MINUTE));
+            Transfer transfer = new Transfer(currentOwner, newOwner, currentTime.getTime());
             land.addTransfer(transfer);
             currentOwner.removeProperty(land);
             newOwner.addProperty(land);
