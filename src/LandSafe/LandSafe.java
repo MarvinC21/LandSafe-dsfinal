@@ -8,10 +8,9 @@ import java.util.HashMap;
 import java.util.Calendar;
 
 /**
- * LandSafe is a Java Swing application that simulates the transfer of land
- * ownership between two persons.
- * It provides a graphical user interface to input person details and perform
- * the transfer.
+    * LandSafe is a simple application that allows the transfer of land ownership between two persons.
+    * The application has a GUI that contains input fields for person details, a transfer button, an owner label,
+    * and a transfer list.
  */
 public class LandSafe {
     // GUI components
@@ -154,7 +153,8 @@ public class LandSafe {
                                 "Transfer Error", JOptionPane.ERROR_MESSAGE);
                     }
                 }
-            }/*
+            }
+            /*
                 * Validates the ownership of the land by checking if the current owner is the
                 * same as the person initiating the transfer.
              */
