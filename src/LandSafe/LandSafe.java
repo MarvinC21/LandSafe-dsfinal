@@ -44,8 +44,8 @@ public class LandSafe {
      */
     public LandSafe() {
         personMap = new HashMap<>();
-        transferListModel = new DefaultListModel<>(); // List model for transfer records
-        initialize(); // Set up the GUI components
+        transferListModel = new DefaultListModel<>();
+        initialize();
     }
 
     /**
@@ -224,9 +224,14 @@ public class LandSafe {
         nameField1.setText(newOwner.getName());
         idField1.setText(newOwner.getId());
         ageField1.setText(String.valueOf(newOwner.getAge()));
-
+        // Clear the fields for the new owner and enable editing
         nameField2.setText("");
         idField2.setText("");
         ageField2.setText("");
+
+        // Disable editing for the fields of the current owner to prevent changes
+        nameField1.setEditable(false);
+        idField1.setEditable(false);
+        ageField1.setEditable(false);
     }
 }
