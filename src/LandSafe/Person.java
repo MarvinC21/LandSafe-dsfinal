@@ -27,6 +27,14 @@ public class Person {
         if (!propertiesOwned.contains(land)) return;
         this.propertiesOwned.remove(land);
     }
+    public boolean validateAge() {
+        if (age < 18){
+            return false; 
+        }
+        else{
+            return true;
+        }
+    }
 
     public String getName() {
         return name;
