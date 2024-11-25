@@ -1,6 +1,11 @@
-package LandSafe;
+package LandSafe.GUI;
 
 import javax.swing.*;
+
+import LandSafe.Land;
+import LandSafe.Person;
+import LandSafe.Transfer;
+
 import java.util.Calendar;
 import java.util.HashMap;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package LandSafe;
+package LandSafe.GUI;
 
 import javax.swing.*;
 import java.awt.*;

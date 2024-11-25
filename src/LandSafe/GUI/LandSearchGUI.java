@@ -1,4 +1,4 @@
-package LandSafe;
+package LandSafe.GUI;
 
 public class LandSearchGUI {
     
