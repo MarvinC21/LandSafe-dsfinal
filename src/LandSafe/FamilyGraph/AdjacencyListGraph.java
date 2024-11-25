@@ -47,6 +47,4 @@ public class AdjacencyListGraph {
         assert(v > 0 && v < V);
         return adj[v];
     }
-
-    
 }
