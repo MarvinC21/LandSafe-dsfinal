@@ -16,6 +16,7 @@ public class Land {
         this.ownerHistory = new ArrayList<>();
         this.ownerHistory.add(owner);
     }
+    
     /*
      * This method returns the current owner of the land
      * @addTransfer(Transfer transfer) This method handles the transfer of land ownership
