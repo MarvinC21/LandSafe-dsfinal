@@ -3,6 +3,8 @@ package LandSafe.GUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -10,11 +12,15 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import LandSafe.Person;
+
 public class RegisterUserGUI extends JFrame {
     private JTextField nameField;
     private JTextField idField;
     private JTextField ageField;
     private JButton registerButton;
+    private HashMap<String, Person> personMap;
+    private int idNum = 0; 
 
     public RegisterUserGUI() {
         setTitle("Register User");
@@ -31,6 +37,7 @@ public class RegisterUserGUI extends JFrame {
 
         panel.add(new JLabel("ID:"));
         idField = new JTextField();
+        idField.setText((Integer.toString(idNum)));
         panel.add(idField);
 
         panel.add(new JLabel("Age:"));
@@ -46,10 +53,9 @@ public class RegisterUserGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = nameField.getText();
-                String id = idField.getText();
                 String ageText = ageField.getText();
 
-                if (name.isEmpty() || id.isEmpty() || ageText.isEmpty()) {
+                 if (name.isEmpty() || ageText.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Please fill in all fields.", "Error",
                             JOptionPane.ERROR_MESSAGE);
                 } else {
@@ -69,6 +75,7 @@ public class RegisterUserGUI extends JFrame {
                 }
             }
         });
+        
     }
 
 }
