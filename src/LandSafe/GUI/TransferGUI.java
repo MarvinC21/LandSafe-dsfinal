@@ -231,4 +231,8 @@ public class TransferGUI {
         idField1.setEditable(false);
         ageField1.setEditable(false);
     }
+    // Add a method to set the visibility of the frame
+    public void setVisible(boolean b) {
+        frame.setVisible(b);
+    }
 }

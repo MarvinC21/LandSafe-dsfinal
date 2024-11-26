@@ -4,8 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
-import java.util.Calendar;
 
 /**
     * LandSafe is a simple application that allows the transfer of land ownership between two persons.
@@ -79,8 +77,57 @@ public class LandSafe {
         JButton ownerRegister = new JButton("Register User");
         frame.getContentPane().add(ownerRegister, BorderLayout.EAST);
 
+
+         // Create a panel for the buttons
+         JPanel buttonPanel = new JPanel();
+         buttonPanel.setLayout(new GridLayout(4, 1));
+         frame.getContentPane().add(buttonPanel, BorderLayout.EAST);
+          // Add transfer button to the button panel
+         buttonPanel.add(transferButton);
+          // Add owner lookup button to the button panel
+         buttonPanel.add(ownerLookup);
+          // Add land lookup button to the button panel
+         buttonPanel.add(landLookup);
+          // Add owner register button to the button panel
+         buttonPanel.add(ownerRegister);
+
+
+
+
+       // Add action listener to ownerRegister button
+       ownerRegister.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+           RegisterUserGUI registerUserGUI = new RegisterUserGUI();
+           registerUserGUI.setVisible(true);
+           }
+       });
+  
+       // Add action listener to ownerLookup button
+       ownerLookup.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+           OwnerSearchGUI ownerSearchGUI = new OwnerSearchGUI();
+           ownerSearchGUI.setVisible(true);
+           }
+       });
+       transferButton.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               TransferGUI transferGUI = new TransferGUI();
+               transferGUI.setVisible(true);
+           }
+       });
+   }
+
+
   
 
+
+
+
+
+
+
+
+   //we do need the code below for now!!!!
     
     //      * Add action listener to transfer button
     //      * When the button is clicked, the transfer method is called to transfer the
@@ -212,5 +259,4 @@ public class LandSafe {
     //     idField1.setEditable(false);
     //     ageField1.setEditable(false);
     // }
-    }
 }
