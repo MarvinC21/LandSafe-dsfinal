@@ -4,12 +4,12 @@ import org.junit.jupiter.api.*;
 
 import LandSafe.FamilyGraph.*;
 
-public class AdjacencyGraphTest {
+public class GraphTest {
     AdjacencyListGraph<Integer> testGraph;
 
     @BeforeEach
     void createGraph() {
-        testGraph = new AdjacencyListGraph<Integer>(4);
+        testGraph = new AdjacencyListGraph<Integer>();
     }
 
     @Test
