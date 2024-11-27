@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import LandSafe.Person;
+import LandSafe.Backend.Person;
 
 public class RegisterUserGUI extends JFrame {
     private JTextField nameField;

@@ -1,4 +1,4 @@
-package LandSafe;
+package LandSafe.Backend;
 
 import java.util.Date;
 

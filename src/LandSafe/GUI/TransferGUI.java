@@ -2,9 +2,9 @@ package LandSafe.GUI;
 
 import javax.swing.*;
 
-import LandSafe.Land;
-import LandSafe.Person;
-import LandSafe.Transfer;
+import LandSafe.Backend.Land;
+import LandSafe.Backend.Person;
+import LandSafe.Backend.Transfer;
 
 import java.util.Calendar;
 import java.util.HashMap;

@@ -115,6 +115,12 @@ public class LandSafe {
                transferGUI.setVisible(true);
            }
        });
+       landLookup.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            LandSearchGUI landSearchGUI = new LandSearchGUI();
+            landSearchGUI.setVisible(true);
+        }
+    });
    }
 
 
